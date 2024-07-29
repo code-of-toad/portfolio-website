@@ -1,0 +1,24 @@
+:root {  /* applies directly to the <html> element */
+    /* Font */
+    --ff-mono: Monospace;
+    --ff-serif-1: "Poppins";
+    /* Color */
+    --color-bg-1: #080808;
+    --color-bg-2: #001005;
+    --color-text: #fff;
+    --color-main: #00ff51;
+}
+
+* {  /* applies to each and every element */
+    /* Box */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    /* Text */
+    font-family: var(--ff-serif-1);
+    text-decoration: none;
+    /* etc */
+    scroll-behavior: smooth;
+}
