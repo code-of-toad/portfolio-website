@@ -1,8 +1,121 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+:root {
+    --DEBUGGGGG-1: rgb(140, 227, 160);
+    --DEBUGGGGG-2: rgb(165, 111, 215);
+    --ff1: Arial, Helvetica, sans-serif;
+    --color-bedrock: #e9e2d5;
+    --color-background1: #ffffff;
+    --color-background2: #ffffff;
+    --color-heading: #e69365;
 }
 
-.testing {
-    border: 20px solid;
+body {
+    background-color: var(--color-bedrock);
+    font-family: var(--ff1);
+    font-size: 16px;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.grid-omega {
+    /* Grid */
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr;
+    /* gap: 0; */
+    /* Dimensions */
+    min-width: 845px;
+    max-width: 1000px;
+    /* Spacing */
+    margin: 0 auto;
+}
+
+.cell-header-flex {
+    /* Grid */
+    grid-column: 1;
+    grid-row: 1;
+    /* Flex */
+    display: flex;
+    justify-content: space-between;
+    /* Dimensions */
+    max-height: 75px;
+    /* etc */
+    background-color: var(--color-bedrock);
+}
+
+.logo {
+    order: 0;
+    width: 440px;
+    height: 75px;
+}
+
+nav {
+    order: 1;
+    margin-bottom: 10px;
+    font-family: monospace;
+    align-self: flex-end;
+} nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+} nav ul li {
+    display: inline;
+    margin-left: 1em;
+    margin-right: 0.5em;
+}
+
+.cell-main-flex {
+    /* Grid */
+    grid-column: 1;
+    grid-row: 2;
+    /* Flex */
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.main-hero {
+    background-color: var(--color-background1);
+} .main-hero h1 {
+    text-align: center;
+    color: var(--color-heading);
+}
+
+.main-projects {
+    background-color: var(--color-background2);
+} .main-projects h1 {
+    text-align: center;
+    color: var(--color-heading);
+}
+
+.main-journal {
+    background-color: var(--color-background1);
+} .main-journal h1 {
+    text-align: center;
+    color: var(--color-heading);
+}
+
+.cell-footer-flex {
+    /* Grid */
+    grid-column: 1;
+    grid-row: 3;
+    /* Flex */
+    display: flex;
+    flex-flow: column nowrap;
+    /* etc */
+    background-color: black;
+}
+
+.contact {
+    background-color: rgb(45, 59, 66);
+}
+.contact h1,
+.contact p {
+    color: white;
+    text-align: center;
+}
+
+.copyright {
+}
+.copyright h6 {
+    color: white;
+    text-align: center;
 }
