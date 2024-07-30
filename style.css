@@ -10,6 +10,18 @@
     --color-main: #00ff51;
 }
 
+/* Hide spinners in Webkit browsers */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide spinners in Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 * {  /* applies to each and every element */
     /* Box */
     box-sizing: border-box;
@@ -36,7 +48,7 @@ body {
     left: 0;
     /* Box */
     width: 100%;
-    padding: 4rem 12%;
+    padding: 2rem 10%;
     background: rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: space-between;
@@ -65,12 +77,15 @@ body {
 span {
     color: var(--color-main);
 }
-.navbar a {
+.navbar {
+    display: flex;
+    margin-top: 30px;
+} .navbar a {
     font-size: 1.8rem;
     color: var(--color-text);
-    margin-left: 2rem;
+    margin-left: 1rem;
     font-weight: 500;
-    font-size: 1.75rem;
+    font-size: 1.35rem;
     border-bottom: 3px solid transparent;
     transition: 0.3s ease;
 } .navbar a:hover {
@@ -80,14 +95,14 @@ span {
 
 section {
     min-height: 100vh;
-    padding: 10rem 12%;
+    padding: 10rem 10%;
 }
 
 .about {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15rem;
+    gap: 7rem;
 }
 .about-content {
     display: flex;
@@ -95,24 +110,30 @@ section {
     align-items: flex-end;
     text-align: right;
 } .about-content h1 {
-    font-size: 5rem;
+    font-size: 3.3rem;
     font-weight: 700;
     margin-top: 1.5rem;
-    line-height: 1;
+    margin-bottom: 1.5rem;
+    line-height: 95%;
 } .about-content h3 {
-    font-size: 3rem;
-    margin: 1rem 0;
+    font-size: 2rem;
+    margin: 1rem 0 1.5rem 0;
+    line-height: 125%;
 } .about-content p {
     font-size: 1.5rem;
     font-weight: 500;
-    line-height: 1.8;
+    line-height: 140%;
 }
-.social-icons a {
+.social-icons {
+    display: flex;
+    justify-content: center;
+} .social-icons a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
-    padding: 1rem;
+    font-size: 2rem;
+    margin: 1rem 0.5rem 1.3rem 0.5rem;
+    padding: 0.5rem;
     background: transparent;
     border: 2px solid var(--color-main);
     border-radius: 50%;
@@ -127,7 +148,8 @@ section {
 }
 .btn {
     display: inline-block;
-    padding: 1rem 3rem;
+    /* margin-top: 0.5rem; */
+    padding: 0.5rem 1.5rem;
     background: var(--color-main);
     box-shadow: 0 0 25px var(--color-main);
     border-radius: 3rem;
@@ -237,18 +259,20 @@ section {
     border: 2px solid var(--color-main);
     margin: 1.5rem 0;
     resize: none;
-  }
+}
 .footer {
     background-color: var(--color-bg-1);
-    padding: 50px 0;
+    padding: 50px 0 20px 0;
 } .footer .social-icons {
     text-align: center;
 } .footer ul {
+    margin-top: 1.5rem;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
 } .footer ul li {
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 } .footer ul li a {
     color: #fff;
     border-bottom: 3px solid transparent;
